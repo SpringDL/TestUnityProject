@@ -4,15 +4,10 @@ using System.Collections;
 public class BlancheModel : MonoBehaviour {
 
 	private Universe universeSS;
-	private Blanche playerSS;
-	private LakituCam lakituCamSS;
-
 
 	// Use this for initialization
 	void Start () {
 		universeSS = GameObject.Find("Universe").GetComponent<Universe>();
-		playerSS = GameObject.Find("Blanche").GetComponent<Blanche>();
-		lakituCamSS = GameObject.Find("Lakitu").GetComponent<LakituCam>();
 	}
 	
 	// Update is called once per frame

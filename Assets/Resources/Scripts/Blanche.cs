@@ -9,15 +9,6 @@ public class Blanche : MonoBehaviour {
 	//Player States
 	public bool grounded = true;
 	public bool jump = false;
-	public bool[] dir8 = new bool[] {false, false, false, false, false, false, false, false, false, false};
-
-	//SpeedMod - Do Not Touch
-	private float wSpeedMod = 1.71f;
-	private float aSpeedMod = -2.15f;
-	private float sSpeedMod = 1.29f;
-	private float dSpeedMod = -2.15f;
-	private float qeSpeedMod = -0.4f;
-	private float zcSpeedMod = -0.65f;
 
 	//Var
 	private float speed = 0;
@@ -56,100 +47,46 @@ public class Blanche : MonoBehaviour {
 	}
 
 	//
-	void FaceDir () {
-
-
-		//W
-		if (universeSS.key_W && !universeSS.key_A && !universeSS.key_D){
-			dir8[8] = true;
-		}else
-		//WD
-		if (universeSS.key_W && universeSS.key_D){
-			dir8[9] = true;
-		}else
-		//D
-		if (universeSS.key_D && !universeSS.key_W && !universeSS.key_S){
-			dir8[6] = true;
-		}else
-		//SD
-		if (universeSS.key_S && universeSS.key_D){
-			dir8[3] = true;
-		}else
-		//S
-		if (universeSS.key_S && !universeSS.key_A && !universeSS.key_D){
-			dir8[2] = true;
-		}else
-		//SA
-		if (universeSS.key_S && universeSS.key_A){
-			dir8[1] = true;
-		}else
-		//A
-		if (universeSS.key_A && !universeSS.key_W && !universeSS.key_S){
-			dir8[4] = true;
-		}else
-		//WA
-		if (universeSS.key_W && universeSS.key_A){
-			dir8[7] = true;
-		}else{
-			dir8[8] = false;
-			dir8[9] = false;
-			dir8[6] = false;
-			dir8[3] = false;
-			dir8[2] = false;
-			dir8[1] = false;
-			dir8[4] = false;
-			dir8[7] = false;
-		}
-
-
-		//NOTHING
-		if (!universeSS.key_W && !universeSS.key_A && !universeSS.key_S && !universeSS.key_D){
-
-		}
-	}
-
-
-	//
 	void CheckInput () {
 		//W
 		if (universeSS.key_W && !universeSS.key_A && !universeSS.key_D){
-			velX = lakituCamSS.LookAt8().x * (speed + wSpeedMod);
-			velZ = lakituCamSS.LookAt8().z * (speed + wSpeedMod);
+			velX = lakituCamSS.LookAt8().x * speed;
+			velZ = lakituCamSS.LookAt8().z * speed;
 		}
 		//WD
 		if (universeSS.key_W && universeSS.key_D){
-			velX = lakituCamSS.LookAt9().x * (speed + qeSpeedMod);
-			velZ = lakituCamSS.LookAt9().z * (speed + qeSpeedMod);
+			velX = lakituCamSS.LookAt9().x * speed;
+			velZ = lakituCamSS.LookAt9().z * speed;
 		}
 		//D
 		if (universeSS.key_D && !universeSS.key_W && !universeSS.key_S){
-			velX = lakituCamSS.LookAt6().x * (speed + dSpeedMod);
-			velZ = lakituCamSS.LookAt6().z * (speed + dSpeedMod);
+			velX = lakituCamSS.LookAt6().x * speed;
+			velZ = lakituCamSS.LookAt6().z * speed;
 		}
 		//SD
 		if (universeSS.key_S && universeSS.key_D){
-			velX = lakituCamSS.LookAt3().x * (speed + zcSpeedMod);
-			velZ = lakituCamSS.LookAt3().z * (speed + zcSpeedMod);
+			velX = lakituCamSS.LookAt3().x * speed;
+			velZ = lakituCamSS.LookAt3().z * speed;
 		}
 		//S
 		if (universeSS.key_S && !universeSS.key_A && !universeSS.key_D){
-			velX = lakituCamSS.LookAt2().x * (speed + sSpeedMod);
-			velZ = lakituCamSS.LookAt2().z * (speed + sSpeedMod);
+			velX = lakituCamSS.LookAt2().x * speed;
+			velZ = lakituCamSS.LookAt2().z * speed;
 		}
 		//SA
 		if (universeSS.key_S && universeSS.key_A){
-			velX = lakituCamSS.LookAt1().x * (speed + zcSpeedMod);
-			velZ = lakituCamSS.LookAt1().z * (speed + zcSpeedMod);
+			velX = lakituCamSS.LookAt1().x * speed;
+			velZ = lakituCamSS.LookAt1().z * speed;
 		}
 		//A
 		if (universeSS.key_A && !universeSS.key_W && !universeSS.key_S){
-			velX = lakituCamSS.LookAt4().x * (speed + aSpeedMod);
-			velZ = lakituCamSS.LookAt4().z * (speed + aSpeedMod);
+			velX = lakituCamSS.LookAt4().x * speed;
+			velZ = lakituCamSS.LookAt4().z * speed;
 		}
 		//WA
 		if (universeSS.key_W && universeSS.key_A){
-			velX = lakituCamSS.LookAt7().x * (speed + qeSpeedMod);
-			velZ = lakituCamSS.LookAt7().z * (speed + qeSpeedMod);
+			velX = lakituCamSS.LookAt7().x * speed;
+			velZ = lakituCamSS.LookAt7().z * speed;
 		}
 		//NOTHING
 		if (!universeSS.key_W && !universeSS.key_A && !universeSS.key_S && !universeSS.key_D){

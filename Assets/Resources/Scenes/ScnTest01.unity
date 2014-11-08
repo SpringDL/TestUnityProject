@@ -929,7 +929,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grounded: 1
   jump: 0
-  dir8: 00000000000000000000
   groundSpeed: 25
   airSpeed: 15
   gravity: -20
