@@ -26,9 +26,9 @@ public class Sword : MonoBehaviour {
 	//
 	void CheckInput () {
 		if (universeSS.key_J && !swinging){
-			Debug.Log("Goob");
 			StartCoroutine("Swing");
 		}
+
 	}
 
 	IEnumerator Swing () {

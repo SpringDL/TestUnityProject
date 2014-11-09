@@ -21,8 +21,7 @@ public class Blanche : MonoBehaviour {
 	private float velX = 0f;
 	private float velY = 0f;
 	private float velZ = 0f;
-
-
+	
 	// Use this for initialization
 	void Start () {
 		universeSS = GameObject.Find("Universe").GetComponent<Universe>();
