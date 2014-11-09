@@ -32,13 +32,8 @@ public class Blanche : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		CheckInput();
-		Debug.Log(rigidbody.velocity.magnitude);
+		//Debug.Log(rigidbody.velocity.magnitude);
 		//FaceDir();
-	}
-
-	//
-	void LateUpdate () {
-
 	}
 	
 	//

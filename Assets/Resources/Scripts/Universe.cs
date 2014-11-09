@@ -10,6 +10,7 @@ public class Universe : MonoBehaviour {
 	public bool key_D = false;
 	public bool key_Space = false;
 	public bool key_F = false;
+	public bool key_J = false;
 
 	// Use this for initialization
 	void Start () {
@@ -29,5 +30,6 @@ public class Universe : MonoBehaviour {
 		key_D = Input.GetKey(KeyCode.D);
 		key_Space = Input.GetKey(KeyCode.Space);
 		key_F = Input.GetKey(KeyCode.F);
+		key_J = Input.GetKey(KeyCode.J);
 	}
 }
